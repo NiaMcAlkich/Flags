@@ -1,11 +1,10 @@
 <div id="stats">
-    <h1>Question:  /8 </h1>
-    <h1>Score: </h1>
-    <h1>Tap the flag of: </h1>
+    <h1>Question:  {{ counter }}/8 </h1>
+    <h1>Score: {{ score }}</h1>
+    <h1>Tap the flag of: {{ correctAnswer }}</h1>
 </div>
 
-<div id="flagImages">
-    
-    <h1>This works</h1>
+<div *ngFor="let flag of flagsToDisplay">
+    <img [src]="imageUrls[flag]" alt="Flag">
 </div>
 
