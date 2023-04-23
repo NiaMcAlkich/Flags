@@ -1,3 +1,5 @@
+<div id="box" class="box">
+
 <div id="stats">
     <h1>Question:  {{ counter }}/8 </h1>
     <h1>Score: {{ score }}</h1>
@@ -5,6 +7,10 @@
 </div>
 
 <div *ngFor="let flag of flagsToDisplay">
-    <img [src]="imageUrls[flag]" alt="Flag">
+    <div>
+        <img (click)="flagTapped(flag)" [src]="imageUrls[flag]" alt="Flag">
+    </div>
+    
 </div>
 
+</div>
